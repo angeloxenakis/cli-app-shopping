@@ -10,24 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_27_160407) do
-
-  create_table "cart_items", force: :cascade do |t|
-    t.integer "item_id"
-    t.integer "user_id"
-    t.string "item_name"
-    t.float "total_price"
-  end
-
-  create_table "discounts", force: :cascade do |t|
-    t.string "name"
-    t.integer "value"
-  end
+ActiveRecord::Schema.define(version: 2021_03_08_171920) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.float "price"
-    t.integer "stock"
+    t.integer "price"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "item_id"
   end
 
   create_table "users", force: :cascade do |t|

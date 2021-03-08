@@ -24,4 +24,6 @@ else
     )
 end
 
+# ActiveRecord::Base.logger = nil
+
 require_all 'app'
